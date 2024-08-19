@@ -16,7 +16,7 @@ const LoginPage = () => {
             },
         };
 
-        const { data } = await axios.post('/users/login', { email, password }, config);
+        const { data } = await axios.post('http://localhost:5000/users/login', { email, password }, config);
         localStorage.setItem('token', data.token);
         navigate('/');
     };

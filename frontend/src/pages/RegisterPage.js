@@ -17,7 +17,7 @@ const RegisterPage = () => {
             },
         };
 
-        const { data } = await axios.post('/users/register', { name, email, password }, config);
+        const { data } = await axios.post('http://localhost:5000/users/register', { name, email, password }, config);
         localStorage.setItem('token', data.token);
         navigate('/');
     };
