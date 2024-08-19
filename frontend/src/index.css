@@ -1,0 +1,254 @@
+/* body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #ecf0f1;
+    transition: background 0.5s ease-in-out;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+input,
+textarea {
+    background: rgba(236, 240, 241, 0.2);
+    border: 2px solid rgba(236, 240, 241, 0.4);
+    color: #ecf0f1;
+    transition: background 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+    background: rgba(236, 240, 241, 0.5);
+    border-color: #ecf0f1;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #bdc3c7;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.Box {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.Box:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.Heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(45deg, #8e44ad, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.Badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.Button {
+    background-color: #2ecc71;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.Button:hover {
+    background-color: #27ae60;
+}
+
+.Button:active {
+    background-color: #1e8449;
+}
+
+@media (max-width: 600px) {
+    .Box {
+        padding: 15px;
+    }
+
+    .Heading {
+        font-size: 1.5rem;
+    }
+
+    .Text {
+        font-size: 1rem;
+    }
+} */
+
+/* Global Styles */
+body {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Button Styles */
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Header Styles */
+h1,
+h2,
+h3 {
+    color: #333;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Form Styles */
+form {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea,
+form select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    color: #333;
+}
+
+/* Task Cards */
+.task-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-card:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
+}
+
+.task-card .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.task-card .due-date {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.task-card .status {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Priority List Styles */
+.priority-list {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.priority-list.low {
+    background-color: #e0f7fa;
+}
+
+.priority-list.medium {
+    background-color: #fff9c4;
+}
+
+.priority-list.high {
+    background-color: #ffebee;
+}
+
+/* Heading Styles */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Toast Styles */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

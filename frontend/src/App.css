@@ -1,0 +1,212 @@
+/* Base Styles */
+:root {
+    --primary-color: #1e1e2f;
+    --secondary-color: #ff6b81;
+    --accent-color: #3f51b5;
+    --background-color: #121212;
+    --text-color: #f5f5f5;
+    --border-radius: 15px;
+    --transition-speed: 0.3s;
+    --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--accent-color)
+    );
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.navbar button {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.navbar button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Task List & Form Styles */
+.task-list,
+.task-form,
+.login-form,
+.task-details {
+    width: 80%;
+    margin: 100px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed),
+        box-shadow var(--transition-speed);
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
+.task-item.low {
+    background-color: rgba(72, 219, 251, 0.2);
+}
+.task-item.medium {
+    background-color: rgba(255, 159, 67, 0.2);
+}
+.task-item.high {
+    background-color: rgba(255, 107, 129, 0.2);
+}
+
+.task-item a {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.task-item a:hover {
+    color: var(--secondary-color);
+}
+
+/* Buttons */
+button {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 15px;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+button:disabled {
+    background-color: #555;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Forms */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    transition: border-color var(--transition-speed),
+        box-shadow var(--transition-speed);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+    outline: none;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+}
+
+.pagination button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+    .task-list,
+    .task-form,
+    .login-form,
+    .task-details {
+        width: 95%;
+        margin: 80px auto;
+        padding: 20px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+    }
+}
